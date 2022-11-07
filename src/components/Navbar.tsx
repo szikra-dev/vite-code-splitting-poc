@@ -16,7 +16,7 @@ const StyledNav = styled.nav`
   }
 `
 
-export const Navbar = () => (
+const Navbar = () => (
   <StyledNav>
     <ul>
       <li>
@@ -28,3 +28,5 @@ export const Navbar = () => (
     </ul>
   </StyledNav>
 )
+
+export default Navbar

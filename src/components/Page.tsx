@@ -1,9 +1,10 @@
+import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
-import { Home } from './Home'
-import { Users } from './Users'
-import { UserPosts } from './UserPosts'
+const Home = React.lazy(() => import('./Home'))
+const Users = React.lazy(() => import('./Users'))
+const UserPosts = React.lazy(() => import('./UserPosts'))
 
 const Container = styled.div`
   width: 100vw - 48px;
@@ -11,7 +12,7 @@ const Container = styled.div`
   padding: 24px;
 `
 
-export const Page = () => (
+const Page = () => (
   <Container>
     <Switch>
       <Route exact path="/">
@@ -26,3 +27,5 @@ export const Page = () => (
     </Switch>
   </Container>
 )
+
+export default Page

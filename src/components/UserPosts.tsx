@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useUser } from '../hooks/useUser'
 import { useUserPosts } from '../hooks/useUserPosts'
 
-export const UserPosts = () => {
+const UserPosts = () => {
   const { id } = useParams<{ id: string }>()
 
   const { user, isLoading: isUserLoading, error: userError } = useUser(id)
@@ -59,3 +59,4 @@ export const UserPosts = () => {
     </div>
   )
 }
+export default UserPosts

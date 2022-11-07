@@ -1,12 +1,16 @@
+import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import { Navbar } from './components/Navbar'
-import { Page } from './components/Page'
+
+const Navbar = React.lazy(() => import('./components/Navbar'))
+const Page = React.lazy(() => import('./components/Page'))
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Page />
+      <Suspense fallback={<div>Loading</div>}>
+        <Navbar />
+        <Page />
+      </Suspense>
     </Router>
   )
 }

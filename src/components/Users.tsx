@@ -20,7 +20,7 @@ const Card = styled.div`
   }
 `
 
-export const Users = () => {
+const Users = () => {
   const history = useHistory()
   const { users, isLoading, error } = useUsers()
 
@@ -49,3 +49,5 @@ export const Users = () => {
     </Container>
   )
 }
+
+export default Users
