@@ -1,0 +1,16 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "importOrder": [
+    "^react$",
+    "<THIRD_PARTY_MODULES>",
+    "__generated__",
+    "^(__mocks__|financials|formatters|lib|localization|styles|test|types|utils)",
+    "^(assets|graphql|hooks|payments|pocs|reporting|shop|store)",
+    "^(components|modals|pages|routes)",
+    "^([./]|containers|features)"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
