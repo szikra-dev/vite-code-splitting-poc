@@ -5,10 +5,8 @@ import { Page } from './components/Page'
 function App() {
   return (
     <Router>
-      <div>
-        <Navbar />
-        <Page />
-      </div>
+      <Navbar />
+      <Page />
     </Router>
   )
 }
